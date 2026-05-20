@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Best Practices for Summer Facility Rentals — PracticePlan</title>
 <meta name="description" content="A strategic guide for schools, districts, and colleges navigating peak summer facility rental season. By PracticePlan.">
 
@@ -839,6 +840,113 @@
     text-transform: uppercase;
     color: rgba(255,255,255,0.55);
     font-weight: 500;
+  }
+
+  /* ============ INLINE LEAD GEN FORM ============ */
+  .cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .cta-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cta-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+  .cta-form-label {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+  .cta-form-field input {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: #fff;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 6px;
+    padding: 10px 12px;
+    outline: none;
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    letter-spacing: -0.005em;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .cta-form-field input::placeholder {
+    color: rgba(255,255,255,0.35);
+  }
+  .cta-form-field input:focus {
+    background: rgba(255,255,255,0.11);
+    border-color: var(--pp-green);
+    box-shadow: 0 0 0 3px rgba(0,168,79,0.18);
+  }
+  .cta-form-field input:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: rgba(255,140,140,0.5);
+  }
+  .cta-form button.cta-button {
+    margin-top: 6px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+  .cta-form button.cta-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* Success state */
+  .cta-success {
+    text-align: center;
+    padding: 18px 4px 6px;
+    animation: ctaSuccessIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes ctaSuccessIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  .cta-success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--pp-green);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    box-shadow: 0 6px 20px -6px rgba(0,168,79,0.6);
+  }
+  .cta-success-icon svg { width: 26px; height: 26px; }
+  .cta-success-title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: -0.022em;
+    margin-bottom: 8px;
+  }
+  .cta-success-text {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+  }
+
+  @media (max-width: 520px) {
+    .cta-form-row { grid-template-columns: 1fr; gap: 12px; }
   }
 
   /* Sidebars */
@@ -1855,7 +1963,7 @@
   <div class="inner">
     <img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1771271476/Asset_1Platform-Logo-PP-2026_e2yewj.svg" alt="PracticePlan">
     <span class="header-label">Operations Guide · 2026</span>
-    <a href="https://conferences.practice-plan.com/athletic-facilities" class="header-cta">Schedule a Walkthrough</a>
+    <a href="#cta" class="header-cta">Schedule a Walkthrough</a>
   </div>
 </header>
 
@@ -1943,12 +2051,12 @@
     <!-- To swap, replace the src URL on any <img> below.             -->
     <!-- ============================================================ -->
     <div class="logo-wall-grid">
-      <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779308301/reynoldsburg-oh_kwb1gh.png" alt="Reynoldsburg City Schools, Ohio"></div>
+      <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779310870/logo_1_ssqhzl.png" alt="Partner school district"></div>
       <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779308300/ascension-la_qydduu.webp" alt="Ascension Parish Schools, Louisiana"></div>
       <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779308300/Horizontal_Wordmark_Print_mqlqpu.png" alt="Partner school district"></div>
       <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779308299/d2_logo157-bj2-cIfk_tlxim9.png" alt="Partner school district"></div>
       <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779308299/Header_Logo2_rday2q.png" alt="Partner school district"></div>
-      <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779308298/251502798_4621558224565081_751299853692352571_n_gt0pjc.jpg" alt="Partner school district"></div>
+      <div class="logo-slot"><img src="https://res.cloudinary.com/dpj2i1xui/image/upload/v1779310870/SystemImageServlet_yzaohp.png" alt="Partner school district"></div>
     </div>
   </div>
 </section>
@@ -2182,7 +2290,7 @@
   <!-- SOFT MID-ARTICLE CTA -->
   <div class="soft-cta fade-in">
     <div class="soft-cta-text"><strong>Curious what this looks like in practice?</strong> See how PracticePlan handles approvals, insurance, and payments for districts across 25+ states.</div>
-    <a href="https://conferences.practice-plan.com/athletic-facilities" class="soft-cta-link">See a Walkthrough</a>
+    <a href="#cta" class="soft-cta-link">See a Walkthrough</a>
   </div>
 
   <!-- SECTION 7 -->
@@ -2381,11 +2489,44 @@
       <div class="cta-box-label">Free Walkthrough</div>
       <div class="cta-box-title">Schedule a personalized demo</div>
       <div class="cta-box-desc">Built around your facilities, your workflow, and your team. Zero pressure.</div>
-      <a href="https://conferences.practice-plan.com/athletic-facilities" class="cta-button">Schedule My Walkthrough</a>
-      <div class="cta-fineprint">
-        <span>Zero Cost</span>
-        <span>No Obligation</span>
-        <span>30 Min</span>
+
+      <form class="cta-form" id="walkthrough-form" novalidate>
+        <div class="cta-form-row">
+          <label class="cta-form-field">
+            <span class="cta-form-label">Name</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="Full name">
+          </label>
+          <label class="cta-form-field">
+            <span class="cta-form-label">Work email</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="you@district.org">
+          </label>
+        </div>
+        <div class="cta-form-row">
+          <label class="cta-form-field">
+            <span class="cta-form-label">School / district</span>
+            <input type="text" name="district" required autocomplete="organization" placeholder="District name">
+          </label>
+          <label class="cta-form-field">
+            <span class="cta-form-label">Phone</span>
+            <input type="tel" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+          </label>
+        </div>
+        <button type="submit" class="cta-button">Schedule My Walkthrough</button>
+        <div class="cta-fineprint">
+          <span>Zero Cost</span>
+          <span>No Obligation</span>
+          <span>30 Min</span>
+        </div>
+      </form>
+
+      <div class="cta-success" id="walkthrough-success" hidden>
+        <div class="cta-success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="cta-success-title">You're on the list.</div>
+        <div class="cta-success-text">We'll reach out within 24 hours to schedule your personalized walkthrough.</div>
       </div>
     </div>
   </div>
@@ -2465,6 +2606,70 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+  // ============ WALKTHROUGH FORM ============
+  const walkthroughForm = document.getElementById('walkthrough-form');
+  const walkthroughSuccess = document.getElementById('walkthrough-success');
+
+  // Tag each lead with this page + any UTM params on the URL.
+  // Mirrors the getSource() pattern used on the conferences pages,
+  // so the same Google Sheet captures where every lead came from.
+  function getLeadSource() {
+    var params = new URLSearchParams(window.location.search);
+    var parts = ['SUMMER-RENTALS-2026'];
+    var utmSource = params.get('utm_source');
+    var utmMedium = params.get('utm_medium');
+    var utmCampaign = params.get('utm_campaign');
+    if (utmSource) parts.push('utm_source:' + utmSource);
+    if (utmMedium) parts.push('utm_medium:' + utmMedium);
+    if (utmCampaign) parts.push('utm_campaign:' + utmCampaign);
+    return parts.join(' | ');
+  }
+
+  if (walkthroughForm) {
+    walkthroughForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Native HTML5 validation first
+      if (!walkthroughForm.checkValidity()) {
+        walkthroughForm.reportValidity();
+        return;
+      }
+
+      const submitBtn = walkthroughForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      // Post to the same Google Form that powers conferences.practice-plan.com.
+      // Field IDs map to the existing Google Sheet columns:
+      //   entry.62845131  → Name
+      //   entry.668821882 → Organization (we send district here)
+      //   entry.1564644554 → Email
+      //   entry.2045164055 → Phone
+      //   entry.76457866  → Source (page identifier + UTM params)
+      const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdfD5zbR6zjBNDgGNI4CPEJ3ieeAFC43PgKKKhYuB_gPKDDjQ/formResponse';
+      const formData = new FormData(walkthroughForm);
+      const params = new URLSearchParams();
+      params.append('entry.62845131', formData.get('name') || '');
+      params.append('entry.668821882', formData.get('district') || '');
+      params.append('entry.1564644554', formData.get('email') || '');
+      params.append('entry.2045164055', formData.get('phone') || '');
+      params.append('entry.76457866', getLeadSource());
+
+      // Google Forms doesn't return CORS headers — use no-cors, fire-and-forget.
+      // The request still posts successfully; we just can't read the response.
+      fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      }).catch(err => console.error('Form submission error:', err));
+
+      walkthroughForm.hidden = true;
+      walkthroughSuccess.hidden = false;
+      walkthroughSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
 
   // ============ ANIMATED STAT COUNTERS ============
   function animateCounter(el, target, duration = 1600) {
